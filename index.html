@@ -12,6 +12,12 @@
 <body>
     
     <!-- header section -->
+    <header class="p-2 font">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Dark/Light Mode</label>
+        </div>  
+    </header>
 
     <!-- main section -->
     <!-- d-flex, justify-content-center originate from bootstrap styling -->
@@ -19,18 +25,24 @@
         <p>My First Blog</p>
     </section>
     
-    <div class="px-4 mb-3">
-        <label for="formGroupExampleInput" class="form-label">Username</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
-    </div>
-    <div class="px-4 mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Blog Title</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Blog Title">
-    </div>
-    <div class="px-4 mb-3">
-        <label for="formGroupExampleInput" class="form-label">Blog Entry</label>
-    <textarea class="form-control" placeholder="What's on your mind?" id="floatingTextarea2" style="height: 150px"></textarea>
-    </div>
+    <!-- custom-form-control is a custom class to override the default bootstrap form focus styling -->
+    <section>
+        <div class="px-4 mb-3">
+            <label for="formGroupExampleInput" class="form-label form-header-font">Username</label>
+            <input type="text" class="form-control custom-form-control" id="formGroupExampleInput" placeholder="Username">
+        </div>
+        <div class="px-4 mb-3">
+            <label for="formGroupExampleInput2" class="form-label form-header-font">Blog Title</label>
+            <input type="text" class="form-control custom-form-control" id="formGroupExampleInput2" placeholder="Blog Title">
+        </div>
+        <div class="px-4 mb-3">
+            <label for="formGroupExampleInput" class="form-label form-header-font">Blog Entry</label>
+        <textarea class="form-control custom-form-control" placeholder="What's on your mind?" id="floatingTextarea2" style="height: 150px"></textarea>
+        </div>
+        <div class="px-4">
+            <button type="button" class="btn btn-primary btn-sm custom-btn-control">Post your blog</button>
+        </div>
+    </section>
       
     <!-- footer section -->
 

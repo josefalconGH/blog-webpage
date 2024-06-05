@@ -1,0 +1,56 @@
+* {
+
+}
+
+:root {
+    /* font variables */
+    --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* color variables */
+    --form-clr-primary: #ff6600;
+    --form-clr-secondary: #ec7e0041;
+    --btn-clr-primary: #faac78;
+    --btn-clr-secondary: #7a410062;
+    --btn-clr-focus: #ec7e0041;
+}
+
+/* CLASS SELECTORS */
+    /* font styling for form headers */
+    .form-header-font {
+        /* font styling */
+        font-family: var(--main-font);
+        /* Semi Bold */
+        font-weight: 600;
+    }
+
+    /* override the default bootstrap form focus styling */
+    .custom-form-control:focus {
+        border-color: var(--form-clr-primary); /* custom border color */
+        box-shadow: 0 0 0 0.25rem var(--form-clr-secondary); /* custom box shadow color */
+    }
+
+    /* override the default bootstrap button styling */
+    .custom-btn-control {
+        background-color: var(--btn-clr-primary); /* custom btn background color */
+        border-color: var(--btn-clr-secondary); /* custom btn border color */
+    }
+
+    /* override the default bootstrap button hover styling */
+    .custom-btn-control:hover {
+        background-color: var(--btn-clr-secondary); /* custom btn hover background color */
+        border-color: var(--btn-clr-primary); /* custom btn hover border color */
+    }
+
+    /* override the default bootstrap button click styling */
+    .custom-btn-control:active {
+        background-color: var(--btn-clr-secondary); /* custom btn active background color */
+        border-color: var(--btn-clr-primary); /* custom btn active border color */
+        box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
+    }
+
+    /* override the default bootstrap button focus styling */
+    .custom-btn-control:focus {
+        background-color: var(--btn-clr-secondary); /* custom btn hover background color */
+        border-color: var(--btn-clr-primary); /* custom btn hover border color */
+        box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
+    }
