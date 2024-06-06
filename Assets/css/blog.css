@@ -50,21 +50,14 @@
         flex-direction: column;
         padding: 1em 1em;
         gap: 0.5em;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 
         /* border styling */
         border-top-style: double;
         border-top-width: 6px;
         border-top-color: black;
-    }
-
-    footer::before,
-    footer::after {
-        content: "";
-        height: 5px;
-        width: 100%;
-        left: 0;
-        position: absolute;
     }
 
     footer p {
@@ -124,14 +117,6 @@
         color: var(--dark-mode-text);
     }
 
-    /* extend footer to bottom fo the page */
-    footer.sticky-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    
     /* override the default bootstrap button styling */
     .custom-btn-control {
         background-color: var(--btn-clr-primary); /* custom btn background color */
@@ -170,6 +155,12 @@
     }
 
 /* ID SELECTORS */
+
+    #page-container {
+        position: relative;
+        min-height: 100vh; /* minimum height of 100% of the viewport height */
+    }
+
     #blogs-list {
         display: flex;
         flex-direction: column; /* stack elements vertically */
