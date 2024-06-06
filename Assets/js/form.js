@@ -7,16 +7,21 @@ document.getElementById('flexSwitchCheckDefault').addEventListener('change', fun
     if (this.checked) {
         document.body.classList.remove('light-mode');
         document.body.classList.add('dark-mode');
+
         document.querySelector('header').classList.remove('light-mode');
         document.querySelector('header').classList.add('dark-mode');
-        document.querySelectorAll('.circle').forEach(function(element) {
-            element.classList.remove('light-mode');
-            element.classList.add('dark-mode');
-        });
+
+        document.querySelector('.custom-toggle-control').classList.remove('light-mode');
+        document.querySelector('.custom-toggle-control').classList.add('dark-mode');
+
+        document.querySelector('.circle').classList.remove('light-mode');
+        document.querySelector('.circle').classList.add('dark-mode');
+
         document.querySelectorAll('.custom-form-control').forEach(function(element) {
             element.classList.remove('light-mode');
             element.classList.add('dark-mode');
         });
+
         document.querySelectorAll('.btn').forEach(function(element) {
             element.classList.remove('light-mode');
             element.classList.add('dark-mode');
@@ -24,16 +29,21 @@ document.getElementById('flexSwitchCheckDefault').addEventListener('change', fun
     } else {
         document.body.classList.remove('dark-mode');
         document.body.classList.add('light-mode');
+
         document.querySelector('header').classList.remove('dark-mode');
         document.querySelector('header').classList.add('light-mode');
-        document.querySelectorAll('.circle').forEach(function(element) {
-            element.classList.remove('dark-mode');
-            element.classList.add('light-mode');
-        });
+
+        document.querySelector('.custom-toggle-control').classList.remove('dark-mode');
+        document.querySelector('.custom-toggle-control').classList.add('light-mode');
+
+        document.querySelector('.circle').classList.remove('dark-mode');
+        document.querySelector('.circle').classList.add('light-mode');
+
         document.querySelectorAll('.custom-form-control').forEach(function(element) {
             element.classList.remove('dark-mode');
             element.classList.add('light-mode');
         });
+
         document.querySelectorAll('.btn').forEach(function(element) {
             element.classList.remove('dark-mode');
             element.classList.add('light-mode');

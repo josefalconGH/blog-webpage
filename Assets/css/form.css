@@ -16,9 +16,9 @@
     --dark-mode-text: #ffffff;
     --form-clr-primary-dark: #090b0f;
     --form-clr-secondary-dark: #21262d;
-    --btn-clr-primary-dark: #747474;
-    --btn-clr-secondary-dark: #b6b6b6;
-    --clr-focus-dark: #7bb2ff;
+    --btn-clr-primary-dark: #1e2c3f;
+    --btn-clr-secondary-dark: #7bb2ff63;
+    --clr-focus-dark: #cbe1ff56;
 }
 
 /* CLASS SELECTORS */

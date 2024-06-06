@@ -14,6 +14,14 @@
     --dark-mode-header: #161b22;
     --dark-mode-text: #ffffff;
 
+    --toggle-clr-primary: #ff6600;
+    --toggle-clr-secondary: #ec7e0041;
+
+    --toggle-clr-primary-dark: #121e30;
+    --toggle-clr-secondary-dark: #7bb2ff63;
+
+    --toggle-clr-background-dark: #3e5c8563;
+
     --circle-clr-primary-dark: #6b8dff;
     --circle-clr-secondary-dark: #0e0c31;
 }
@@ -32,6 +40,49 @@
     }
 
 /* CLASS SELECTORS */
+
+    /* light/dark mode button class */
+    /* override the default bootstrap button styling for dark mode */
+    .custom-toggle-control.light-mode {
+        border-color: var(--toggle-clr-primary); /* custom border color */
+
+        /* the background-image: url("") is important here, it is what creates the circle knob */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ff9c5b'/%3e%3c/svg%3e");
+    }
+
+    /* override the default bootstrap button styling */
+    .custom-toggle-control.light-mode:focus {
+        border-color: var(--toggle-clr-primary); /* custom border color for focus pseudo class */
+        box-shadow: 0 0 0 0.25rem var(--toggle-clr-secondary); /* custom box shadow color for focus pseudo class */
+
+        /* the background-image: url("") is important here, it is what creates the circle knob */
+        /* the color is changed to a shade of orange in light mode using fill='%23ff9c5b' */
+        /* the %23 is important, it is the hex code for # */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ff9c5b'/%3e%3c/svg%3e");  
+    }
+
+    /* override the default bootstrap button styling for dark mode */
+    .custom-toggle-control.dark-mode {
+        background-color: var(--toggle-clr-background-dark); /* custom background color */
+        border-color: var(--toggle-clr-primary-dark); /* custom border color */
+
+        /* the background-image: url("") is important here, it is what creates the circle knob */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+    }
+
+    /* override the default bootstrap button styling for dark mode for focus pseudo class */
+    .custom-toggle-control.dark-mode:focus {
+        background-color: var(--toggle-clr-background-dark);
+        border-color: var(--toggle-clr-primary-dark); /* custom border color for focus pseudo class */
+        box-shadow: 0 0 0 0.25rem var(--toggle-clr-secondary-dark); /* custom box shadow color for focus pseudo class */
+
+        /* the background-image: url("") is important here, it is what creates the circle knob */
+        /* the color is changedd to a shade of blue in dark mode using fill='%23121e30' */
+        /* the %23 is important, it is the hex code for # */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23121e30'/%3e%3c/svg%3e");
+    }
+
+
     /* cirle logo class */
     .circle {
         /* height and width of the cicle logo */
@@ -54,6 +105,7 @@
         margin-bottom: 15px;
     }
 
+    /* change background color for circle logo in dark mode */
     .circle.dark-mode {
         background: linear-gradient(to bottom, var(--circle-clr-primary-dark), var(--circle-clr-secondary-dark));
     }
