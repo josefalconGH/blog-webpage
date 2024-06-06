@@ -1,0 +1,49 @@
+* {
+
+}
+
+:root {
+    /* font variables */
+    --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* color variables */
+    --blog-clr-primary: #ff6600;
+    --blog-clr-secondary: #ec7e0041;
+    --blog-btn-clr-primary: #faac78;
+    --blog-btn-clr-secondary: #7a410062;
+    --blog-btn-clr-focus: #ec7e0041;
+
+    --light-mode-text: #000000;
+    --dark-mode-text: #ffffff;
+
+    --blog-clr-primary-dark: #090b0f;
+    --blog-clr-secondary-dark: #21262d;
+    --blog-btn-clr-primary-dark: #1e2c3f;
+    --blog-btn-clr-secondary-dark: #7bb2ff63;
+    --blog-clr-focus-dark: #cbe1ff56;
+}
+
+/* ELEMENT SELECTORS */
+    /* styling for blog.html header */
+    header {
+        /* font styling */
+        font-family: var(--main-font);
+        /* Semi Bold */
+        font-weight: 600;
+        /* text color */
+        color: var(--light-mode-text);
+        
+        border-bottom-style: double;
+        border-bottom-width: 6px;
+        border-bottom-color: black;
+    }
+
+    header h1 {
+        /* font styling */
+        font-family: var(--main-font);
+        /* Semi Bold */
+        font-weight: 600;
+    }
+
+/* CLASS SELECTORS */
+    

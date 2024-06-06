@@ -60,6 +60,7 @@
     .custom-form-control.dark-mode {
         background-color: var(--form-clr-primary-dark); 
         border-color: var(--form-clr-secondary-dark);
+        color: var(--dark-mode-text);
     }
 
     .custom-form-control.dark-mode:focus { 

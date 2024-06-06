@@ -1,4 +1,45 @@
 // Path: Assets/js/form.js
+// get the form element with id="blog-form"
+const blogForm = $('#blog-form');
+
+blogForm.on('submit', function(event) {
+    event.preventDefault(); // prevent the default form submission
+
+    const blogPosts = JSON.parse(localStorage.getItem("blogPosts")) || []; // get the blogPosts from the localStorage
+
+    // create a newBlogPost object
+    const newBlogPost = {
+        username: blogForm.find('input[name="username"]'),
+        blogTitle: blogForm.find('input[name="blogTitle"]'),
+        blogText: blogForm.find('textarea[name="blogText"]')
+    };
+
+    if (!newBlogPost.username || !newBlogPost.blogTitle || !newBlogPost.blogText) {return;} // if any of the fields are empty, return
+
+    // create a new blogData object
+    const blogData = {
+        username: newBlogPost.username.val().trim(),
+        blogTitle: newBlogPost.blogTitle.val().trim(),
+        blogText: newBlogPost.blogText.val()
+    };
+
+    // blogData entry field validation
+    // if any of the fields are empty, return an alert
+    if (blogData.username === '' || blogData.blogTitle === '' || blogData.blogText === '' ) {
+        return;
+    }
+
+    // clear the form fields
+    newBlogPost.username.val('');
+    newBlogPost.blogTitle.val('');
+    newBlogPost.blogText.val('');
+
+    blogPosts.push(blogData); // add the new blogData object to the blogPosts array
+
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts)); // save the blogPosts array to the localStorage
+
+    window.location.assign('blog.html'); // redirect the user to the blog.html page
+});
 
 // this code is to toggle the light/dark mode functionality of the website
 // this uses the document.getElementById method to get the element with id="flexSwitchCheckDefault"
