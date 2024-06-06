@@ -124,6 +124,14 @@
         color: var(--dark-mode-text);
     }
 
+    /* extend footer to bottom fo the page */
+    footer.sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
     /* override the default bootstrap button styling */
     .custom-btn-control {
         background-color: var(--btn-clr-primary); /* custom btn background color */
