@@ -13,6 +13,9 @@ function applyTheme() {
         const header = document.querySelector('header');
         if (header) header.classList.add(savedTheme); // add the saved theme to the header
 
+        const blogList = document.getElementById('blogs-list');
+        if (blogList) blogList.classList.add(savedTheme); // add the saved theme to the blog list
+
         const toggleControl = document.querySelector('.custom-toggle-control');
         if (toggleControl) toggleControl.classList.add(savedTheme); // add the saved theme to the toggle control
 
@@ -26,6 +29,9 @@ function applyTheme() {
         document.querySelectorAll('.btn').forEach(function(element) {
             element.classList.add(savedTheme); // add the saved theme to the buttons
         });
+
+        const footer = document.querySelector('footer');
+        if (footer) footer.classList.add(savedTheme); // add the saved theme to the header
 
         // update the toggle switch state based on the theme
         const toggleSwitch = document.getElementById('flexSwitchCheckDefault');

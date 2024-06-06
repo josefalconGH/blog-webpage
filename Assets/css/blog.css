@@ -95,11 +95,33 @@
 /* CLASS SELECTORS */
 
     /* styling for blog.html header in dark mode */
-    header.dark-mode{
+    header.dark-mode {
         /* text color */
         color: var(--dark-mode-text);
         /* border styling */
         border-bottom-color: var(--blog-clr-secondary-dark);
+    }
+
+    footer.dark-mode {
+        /* border styling */
+        border-top-color: var(--blog-clr-secondary-dark);
+        /* background color */
+        background-color: var(--blog-clr-primary-dark);
+    }
+
+    footer.dark-mode p {
+        /* text color */
+        color: var(--dark-mode-text);
+    }
+
+    footer.dark-mode ul li {
+        /* text color */
+        color: var(--dark-mode-text);
+    }
+
+    footer.dark-mode a {
+        /* text color */
+        color: var(--dark-mode-text);
     }
 
     /* override the default bootstrap button styling */
@@ -159,10 +181,20 @@
         padding: 1em; /* padding around the list items */
     }
 
+    #blogs-list.dark-mode li {
+        border: solid 2px var(--blog-clr-secondary-dark);
+        background-color: var(--blog-clr-primary-dark);
+    }
+
     #blogs-list li h2 {
         font-size: 1.4em; /* 1.4 times the default font size */
         border-bottom: solid 2px rgba(0, 0, 0, 0.425); /* border at the bottom of the h2 element */
         font-weight: 600; /* bold font weight */
+    }
+
+    #blogs-list.dark-mode li h2 {
+        color: var(--dark-mode-text); /* text color */
+        border-bottom: solid 2px var(--blog-clr-secondary-dark); /* border at the bottom of the h2 element */
     }
 
     #blogs-list li p {
@@ -172,9 +204,18 @@
         min-height: 15px; /* minimum height of 125px */
     }
 
+    #blogs-list.dark-mode li p {
+        color: var(--dark-mode-text); /* text color */
+    }
+
     #blogs-list li small {
         font-size: 0.9em; /* 0.8 times the default font size */
         font-weight: 700; /* bold font weight */
 
         opacity: 0.50; /* 75% opacity */
     }
+
+    #blogs-list.dark-mode li small {
+        color: var(--dark-mode-text); /* text color */
+    }
+    
