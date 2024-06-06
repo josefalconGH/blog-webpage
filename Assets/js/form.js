@@ -1,5 +1,6 @@
 // Path: Assets/js/form.js
 // get the form element with id="blog-form"
+// VARIABLES
 const blogForm = $('#blog-form');
 
 blogForm.on('submit', function(event) {
@@ -46,10 +47,48 @@ document.getElementById('view-blogs').addEventListener('click', function() {
     window.location.assign('blog.html');
 });
 
+// apply the saved theme from localStorage
+function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme); // add the saved theme to the body
+
+        const header = document.querySelector('header');
+        if (header) header.classList.add(savedTheme); // add the saved theme to the header
+
+        const toggleControl = document.querySelector('.custom-toggle-control');
+        if (toggleControl) toggleControl.classList.add(savedTheme);
+
+        const circle = document.querySelector('.circle');
+        if (circle) circle.classList.add(savedTheme); // add the saved theme to the circle
+
+        document.querySelectorAll('.custom-form-control').forEach(function(element) {
+            element.classList.add(savedTheme); // add the saved theme to the custom-form-control elements
+        });
+
+        document.querySelectorAll('.btn').forEach(function(element) {
+            element.classList.add(savedTheme); // add the saved theme to the buttons
+        });
+
+        // Optionally, update the toggle switch state based on the theme
+        const toggleSwitch = document.getElementById('flexSwitchCheckDefault');
+        if (toggleSwitch && savedTheme === 'dark-mode') {
+            toggleSwitch.checked = true; // set the toggle switch to checked if the saved theme is dark-mode
+        }
+    }
+}
+
+// Call applyTheme function on page load
+document.addEventListener('DOMContentLoaded', function() {
+    applyTheme();
+});
+
 // this code is to toggle the light/dark mode functionality of the website
-// this uses the document.getElementById method to get the element with id="flexSwitchCheckDefault"
-// the addEventListener method is used to listen for the change event on the toggle switch at the top of the page
-document.getElementById('flexSwitchCheckDefault').addEventListener('change', function() {
+// this uses the $('#flexSwitchCheckDefault') method to get the element with id="flexSwitchCheckDefault"
+// the on method is used to listen for the change event on the toggle switch at the top of the page
+const currentTheme = $('#flexSwitchCheckDefault');
+
+currentTheme.on('change', function() {
     if (this.checked) {
         document.body.classList.remove('light-mode');
         document.body.classList.add('dark-mode');
@@ -72,6 +111,8 @@ document.getElementById('flexSwitchCheckDefault').addEventListener('change', fun
             element.classList.remove('light-mode');
             element.classList.add('dark-mode');
         });
+
+        localStorage.setItem('theme', 'dark-mode');
     } else {
         document.body.classList.remove('dark-mode');
         document.body.classList.add('light-mode');
@@ -94,5 +135,7 @@ document.getElementById('flexSwitchCheckDefault').addEventListener('change', fun
             element.classList.remove('dark-mode');
             element.classList.add('light-mode');
         });
+
+        localStorage.setItem('theme', 'light-mode');
     }
 });
