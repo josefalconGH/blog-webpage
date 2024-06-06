@@ -9,13 +9,14 @@
 
     <title>Blog Form Page</title>
 </head>
-<body>
+
+<body class="light-mode">
     
     <!-- header section -->
-    <header class="p-2 font">
+    <header class="p-2 font light-mode">
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Dark/Light Mode</label>
+            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
         </div>  
     </header>
 
@@ -29,18 +30,18 @@
     <section>
         <div class="px-4 mb-3">
             <label for="formGroupExampleInput" class="form-label form-header-font">Username</label>
-            <input type="text" class="form-control custom-form-control" id="formGroupExampleInput" placeholder="Username">
+            <input type="text" class="form-control custom-form-control light-mode" id="formGroupExampleInput" placeholder="Username">
         </div>
         <div class="px-4 mb-3">
             <label for="formGroupExampleInput2" class="form-label form-header-font">Blog Title</label>
-            <input type="text" class="form-control custom-form-control" id="formGroupExampleInput2" placeholder="Blog Title">
+            <input type="text" class="form-control custom-form-control light-mode" id="formGroupExampleInput2" placeholder="Blog Title">
         </div>
         <div class="px-4 mb-3">
             <label for="formGroupExampleInput" class="form-label form-header-font">Blog Entry</label>
-        <textarea class="form-control custom-form-control" placeholder="What's on your mind?" id="floatingTextarea2" style="height: 150px"></textarea>
+        <textarea class="form-control custom-form-control light-mode" placeholder="What's on your mind?" id="floatingTextarea2" style="height: 150px"></textarea>
         </div>
         <div class="px-4">
-            <button type="button" id="postYourBlog" class="btn btn-primary btn-sm custom-btn-control">Post your blog</button>
+            <button type="button" id="postYourBlog" class="btn btn-primary btn-sm custom-btn-control light-mode">Post your blog</button>
         </div>
     </section>
       
@@ -52,14 +53,9 @@
             crossorigin="anonymous">
     </script>
     
-    <!-- link to new .html upong button interaction -->
-    <!-- this uses the window.location.assign method to redirect the user to the blog.html page -->
-    <!-- given the button with id="postYourBlog" is pressed -->
-    <script>
-        document.getElementById('postYourBlog').addEventListener('click', function() {
-            window.location.assign('blog.html');
-        });
-    </script>
+    <!-- link to custom logic.js file -->
+    <script src="./Assets/js/logic.js"></script>
 
 </body>
+
 </html>
