@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./Assets/css/styles.css">
     <link rel="stylesheet" href="./Assets/css/form.css">
 
-    <title>Personal Blog</title>
+    <title>Blog Form Page</title>
 </head>
 <body>
     
@@ -40,7 +40,7 @@
         <textarea class="form-control custom-form-control" placeholder="What's on your mind?" id="floatingTextarea2" style="height: 150px"></textarea>
         </div>
         <div class="px-4">
-            <button type="button" class="btn btn-primary btn-sm custom-btn-control">Post your blog</button>
+            <button type="button" id="postYourBlog" class="btn btn-primary btn-sm custom-btn-control">Post your blog</button>
         </div>
     </section>
       
@@ -52,5 +52,14 @@
             crossorigin="anonymous">
     </script>
     
+    <!-- link to new .html upong button interaction -->
+    <!-- this uses the window.location.assign method to redirect the user to the blog.html page -->
+    <!-- given the button with id="postYourBlog" is pressed -->
+    <script>
+        document.getElementById('postYourBlog').addEventListener('click', function() {
+            window.location.assign('blog.html');
+        });
+    </script>
+
 </body>
 </html>
