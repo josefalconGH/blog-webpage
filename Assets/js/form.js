@@ -41,6 +41,11 @@ blogForm.on('submit', function(event) {
     window.location.assign('blog.html'); // redirect the user to the blog.html page
 });
 
+// add redirect funtionality to the blog.html page when View Blog button is clicked
+document.getElementById('view-blogs').addEventListener('click', function() {
+    window.location.assign('blog.html');
+});
+
 // this code is to toggle the light/dark mode functionality of the website
 // this uses the document.getElementById method to get the element with id="flexSwitchCheckDefault"
 // the addEventListener method is used to listen for the change event on the toggle switch at the top of the page
