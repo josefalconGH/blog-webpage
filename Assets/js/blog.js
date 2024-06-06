@@ -1,7 +1,7 @@
 // Path: Assets/js/blog.js
 
 // VARIABLES
-const blogUL = $('#blogs-list');// get the ul element with id="blog-list"
+const blogUL = $('#blogs-list'); // get the ul element with id="blog-list"
 let blogPosts = []; // create an empty array to store the blog posts
 
 // apply the saved theme from localStorage
@@ -27,7 +27,7 @@ function applyTheme() {
             element.classList.add(savedTheme); // add the saved theme to the buttons
         });
 
-        // Optionally, update the toggle switch state based on the theme
+        // update the toggle switch state based on the theme
         const toggleSwitch = document.getElementById('flexSwitchCheckDefault');
         if (toggleSwitch && savedTheme === 'dark-mode') {
             toggleSwitch.checked = true; // set the toggle switch to checked if the saved theme is dark-mode
@@ -35,7 +35,7 @@ function applyTheme() {
     }
 }
 
-// Call applyTheme function on page load
+// call applyTheme function on page load
 document.addEventListener('DOMContentLoaded', function() {
     applyTheme();
 });
@@ -46,14 +46,14 @@ function renderBlogPosts() {
     const existingBlogs = JSON.parse(localStorage.getItem('blogPosts')); // pull already created blog posts from local storage
 
     // if there are no blog posts, return
-    if (!existingBlogs && existingBlogs.length === 0) {return;}
+    if (!existingBlogs && existingBlogs.length < 1) {return;}
 
     // loop through the existing posts and add them to the blogPosts array
     for (const post of existingBlogs) {
         const postItem = $('<li>');
-        const postTitle = $('<h2>').text(post.title);
-        const postContent = $('<p>').text(post.content);
-        const postAuthor = $('<p>').text(`Posted by: ${post.username}`);
+        const postTitle = $('<h2>').text(post.blogTitle);
+        const postContent = $('<p>').text(post.blogText);
+        const postAuthor = $('<small>').text(`Posted by: ${post.username}`);
 
         postItem.append(postTitle, postContent, postAuthor);
         blogUL.append(postItem);

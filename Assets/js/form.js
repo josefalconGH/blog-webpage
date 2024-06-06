@@ -1,7 +1,7 @@
 // Path: Assets/js/form.js
-// get the form element with id="blog-form"
+
 // VARIABLES
-const blogForm = $('#blog-form');
+const blogForm = $('#blog-form'); // get the form element with id="blog-form"
 
 blogForm.on('submit', function(event) {
     event.preventDefault(); // prevent the default form submission
@@ -70,7 +70,7 @@ function applyTheme() {
             element.classList.add(savedTheme); // add the saved theme to the buttons
         });
 
-        // Optionally, update the toggle switch state based on the theme
+        // update the toggle switch state based on the theme
         const toggleSwitch = document.getElementById('flexSwitchCheckDefault');
         if (toggleSwitch && savedTheme === 'dark-mode') {
             toggleSwitch.checked = true; // set the toggle switch to checked if the saved theme is dark-mode
@@ -78,7 +78,7 @@ function applyTheme() {
     }
 }
 
-// Call applyTheme function on page load
+// call applyTheme function on page load
 document.addEventListener('DOMContentLoaded', function() {
     applyTheme();
 });

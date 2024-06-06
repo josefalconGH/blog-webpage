@@ -9,18 +9,18 @@
     /* color variables */
     --blog-clr-primary: #ff6600;
     --blog-clr-secondary: #ec7e0041;
-    --blog-btn-clr-primary: #faac78;
-    --blog-btn-clr-secondary: #7a410062;
-    --blog-btn-clr-focus: #ec7e0041;
+    --btn-clr-primary: #faac78;
+    --btn-clr-secondary: #7a410062;
+    --btn-clr-focus: #ec7e0041;
 
     --light-mode-text: #000000;
     --dark-mode-text: #ffffff;
 
     --blog-clr-primary-dark: #090b0f;
     --blog-clr-secondary-dark: #21262d;
-    --blog-btn-clr-primary-dark: #1e2c3f;
-    --blog-btn-clr-secondary-dark: #7bb2ff63;
-    --blog-clr-focus-dark: #cbe1ff56;
+    --btn-clr-primary-dark: #1e2c3f;
+    --btn-clr-secondary-dark: #7bb2ff63;
+    --clr-focus-dark: #cbe1ff56;
 }
 
 /* ELEMENT SELECTORS */
@@ -32,7 +32,7 @@
         font-weight: 600;
         /* text color */
         color: var(--light-mode-text);
-        
+        /* border styling */
         border-bottom-style: double;
         border-bottom-width: 6px;
         border-bottom-color: black;
@@ -45,5 +45,136 @@
         font-weight: 600;
     }
 
-/* CLASS SELECTORS */
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1em 1em;
+        gap: 0.5em;
+        position: relative;
+
+        /* border styling */
+        border-top-style: double;
+        border-top-width: 6px;
+        border-top-color: black;
+    }
+
+    footer::before,
+    footer::after {
+        content: "";
+        height: 5px;
+        width: 100%;
+        left: 0;
+        position: absolute;
+    }
+
+    footer p {
+        text-align: center;
+        font-weight: normal;
+        font-size: 1em;
+
+        font-weight: 700; /* bold font weight */
+    }
     
+    footer ul li {
+        list-style: none; /* remove bullet points */
+        font-weight: 700; /* bold font weight */
+        font-style: italic; /* italicize the text */
+    }
+
+    /* target a tags within the footer */
+    footer a {
+        font-weight: normal; /* normal font weight */
+        color: black; /* text color */
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: var(--blog-clr-primary); /* text color */
+    }
+
+/* CLASS SELECTORS */
+
+    /* styling for blog.html header in dark mode */
+    header.dark-mode{
+        /* text color */
+        color: var(--dark-mode-text);
+        /* border styling */
+        border-bottom-color: var(--blog-clr-secondary-dark);
+    }
+
+    /* override the default bootstrap button styling */
+    .custom-btn-control {
+        background-color: var(--btn-clr-primary); /* custom btn background color */
+        border-color: var(--btn-clr-secondary); /* custom btn border color */
+    }
+
+    /* override the default bootstrap button hover styling */
+    .custom-btn-control:hover {
+        background-color: var(--btn-clr-secondary); /* custom btn hover background color */
+        border-color: var(--btn-clr-primary); /* custom btn hover border color */
+        box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
+    }
+
+    /* override the default bootstrap button focus styling */
+    .custom-btn-control:focus {
+        background-color: var(--btn-clr-secondary); /* custom btn hover background color */
+        border-color: var(--btn-clr-primary); /* custom btn hover border color */
+        box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
+    }
+
+    .custom-btn-control.dark-mode {
+        background-color: var(--btn-clr-primary-dark);
+        border-color: var(--btn-clr-secondary-dark);
+    }
+
+    .custom-btn-control.dark-mode:hover {
+        background-color: var(--btn-clr-secondary-dark);
+        border-color: var(--btn-clr-primary-dark);
+        box-shadow: 0 0 0 0.25rem var(--clr-focus-dark);
+    }
+
+    .custom-btn-control.dark-mode:focus {
+        background-color: var(--btn-clr-secondary-dark);
+        border-color: var(--btn-clr-primary-dark);
+        box-shadow: 0 0 0 0.25rem var(--clr-focus-dark);
+    }
+
+/* ID SELECTORS */
+    #blogs-list {
+        display: flex;
+        flex-direction: column; /* stack elements vertically */
+        list-style: none; /* remove bullet points */
+
+        /* spacing for ul elements */
+        gap: 0.75em;
+        width: 100%;
+        padding: 10px 20px;
+
+        flex: 1; /* fill remaining space */
+    }
+
+    #blogs-list li {
+        border: solid 2px black;
+        border-radius: 5px; /* rounded corners */
+        padding: 1em; /* padding around the list items */
+    }
+
+    #blogs-list li h2 {
+        font-size: 1.4em; /* 1.4 times the default font size */
+        border-bottom: solid 2px rgba(0, 0, 0, 0.425); /* border at the bottom of the h2 element */
+        font-weight: 600; /* bold font weight */
+    }
+
+    #blogs-list li p {
+        font-size: 1em; /* 1 times the default font size */
+        font-style: italic; /* italicize the paragraph text */
+
+        min-height: 15px; /* minimum height of 125px */
+    }
+
+    #blogs-list li small {
+        font-size: 0.9em; /* 0.8 times the default font size */
+        font-weight: 700; /* bold font weight */
+
+        opacity: 0.50; /* 75% opacity */
+    }
