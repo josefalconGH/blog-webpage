@@ -9,7 +9,27 @@
     /* color variables */
     --circle-clr-primary: #ffe44d;
     --circle-clr-secondary: #8b4a00;
+
+    --dark-mode-background: #0d1117;
+    --dark-mode-header: #161b22;
+    --dark-mode-text: #ffffff;
+
+    --circle-clr-primary-dark: #6b8dff;
+    --circle-clr-secondary-dark: #0e0c31;
 }
+
+/* ELEMENT SELECTORS */
+    body.dark-mode {
+        background-color: var(--dark-mode-background);
+    }
+
+    body.dark-mode label {
+        color: var(--dark-mode-text);
+    }
+
+    header.dark-mode {
+        background-color: var(--dark-mode-header);
+    }
 
 /* CLASS SELECTORS */
     /* cirle logo class */
@@ -32,4 +52,8 @@
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 15px;
+    }
+
+    .circle.dark-mode {
+        background: linear-gradient(to bottom, var(--circle-clr-primary-dark), var(--circle-clr-secondary-dark));
     }

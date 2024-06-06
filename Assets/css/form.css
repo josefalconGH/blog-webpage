@@ -12,6 +12,13 @@
     --btn-clr-primary: #faac78;
     --btn-clr-secondary: #7a410062;
     --btn-clr-focus: #ec7e0041;
+
+    --dark-mode-text: #ffffff;
+    --form-clr-primary-dark: #090b0f;
+    --form-clr-secondary-dark: #21262d;
+    --btn-clr-primary-dark: #747474;
+    --btn-clr-secondary-dark: #b6b6b6;
+    --clr-focus-dark: #7bb2ff;
 }
 
 /* CLASS SELECTORS */
@@ -39,10 +46,6 @@
     .custom-btn-control:hover {
         background-color: var(--btn-clr-secondary); /* custom btn hover background color */
         border-color: var(--btn-clr-primary); /* custom btn hover border color */
-    }
-
-    /* override the default bootstrap button click styling */
-    .custom-btn-control:active, .custon-btn-control:target {
         box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
     }
 
@@ -51,4 +54,32 @@
         background-color: var(--btn-clr-secondary); /* custom btn hover background color */
         border-color: var(--btn-clr-primary); /* custom btn hover border color */
         box-shadow: 0 0 0 0.25rem var(--btn-clr-focus); /* custom box shadow color */
+    }
+
+    /* style adjusstments for dark mode */
+    .custom-form-control.dark-mode {
+        background-color: var(--form-clr-primary-dark); 
+        border-color: var(--form-clr-secondary-dark);
+    }
+
+    .custom-form-control.dark-mode:focus { 
+        box-shadow: 0 0 0 0.25rem var(--clr-focus-dark);
+        color: var(--dark-mode-text);
+    }
+
+    .custom-btn-control.dark-mode {
+        background-color: var(--btn-clr-primary-dark);
+        border-color: var(--btn-clr-secondary-dark);
+    }
+
+    .custom-btn-control.dark-mode:hover {
+        background-color: var(--btn-clr-secondary-dark);
+        border-color: var(--btn-clr-primary-dark);
+        box-shadow: 0 0 0 0.25rem var(--clr-focus-dark);
+    }
+
+    .custom-btn-control.dark-mode:focus {
+        background-color: var(--btn-clr-secondary-dark);
+        border-color: var(--btn-clr-primary-dark);
+        box-shadow: 0 0 0 0.25rem var(--clr-focus-dark);
     }
