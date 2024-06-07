@@ -6,7 +6,7 @@ blog-webpage is a simple, responsive web application that allows users to create
 
 ```md
 blog-webpage
-├── assets
+├── Assets
 │   ├── css
 │   │   ├── blog.css
 │   │   ├── form.css
