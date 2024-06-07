@@ -31,6 +31,8 @@ blog-webpage
 
 ## Mock-Up
 
+The blog webpage can be viewed at: https://josefalcongh.github.io/blog-webpage/
+
 ### Blog Form Page (index.html)
 
 The blog form page allows users to input their username, blog title, and blog content. It includes a header with a theme toggle switch, a form section for blog input, and buttons to post or view blogs.
