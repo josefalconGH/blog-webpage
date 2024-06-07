@@ -62,7 +62,7 @@ The blog display page shows a list of blog entries. It includes a header with th
     cd my-blog
     ```
 3. Open `index.html` in your preferred web browser to access the blog form page.
-4. Fill in the form with your blog details and click "Post your blog" to save the entry.
+4. Fill in the form with your blog details and click "Post your blog" to save entry.
 5. Click "View blogs" to navigate to the blog display page (`blog.html`) where all blog entries are listed.
 
 ## License
